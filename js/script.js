@@ -94,9 +94,9 @@ prev.addEventListener('click', function(){
 });
 
 document.getElementById('activeAutoplay').addEventListener('click', function(){
-    let activeAutoplay = setInterval(autoplay, 3000);
+    setInterval(autoplay, 3000);
 })
 
 document.getElementById('disactiveAutoplay').addEventListener('click', function(){
-    let disactiveAutoplay = clearInterval(start);
+    clearInterval(start);
 })
