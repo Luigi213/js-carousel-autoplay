@@ -38,7 +38,7 @@ circles[itemActive].classList.add('active');
 const prev = document.querySelector('.prev');
 const next = document.querySelector('.next');
 
-next.addEventListener('click', function(){
+setInterval( function(){
     //verifico l'elemento attivo (itemActive)
     items[itemActive].classList.remove('active');
     circles[itemActive].classList.remove('active');
@@ -53,7 +53,7 @@ next.addEventListener('click', function(){
     items[itemActive].classList.add('active');
     circles[itemActive].classList.add('active');
     //stessa cosa per i cerchi
-});
+}, 3000);
 
 prev.addEventListener('click', function(){
     //verifico l'elemento attivo (itemActive)
