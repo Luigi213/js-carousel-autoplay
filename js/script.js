@@ -38,7 +38,7 @@ circles[itemActive].classList.add('active');
 const prev = document.querySelector('.prev');
 const next = document.querySelector('.next');
 
-setInterval( function(){
+function autoplay(){
     //verifico l'elemento attivo (itemActive)
     items[itemActive].classList.remove('active');
     circles[itemActive].classList.remove('active');
@@ -53,7 +53,9 @@ setInterval( function(){
     items[itemActive].classList.add('active');
     circles[itemActive].classList.add('active');
     //stessa cosa per i cerchi
-}, 3000);
+}
+
+const start = setInterval(autoplay, 3000);
 
 next.addEventListener('click', function(){
     //verifico l'elemento attivo (itemActive)
@@ -90,3 +92,11 @@ prev.addEventListener('click', function(){
     //stessa cosa per i cerchi
 
 });
+
+document.getElementById('activeAutoplay').addEventListener('click', function(){
+    let activeAutoplay = setInterval(autoplay, 3000);
+})
+
+document.getElementById('disactiveAutoplay').addEventListener('click', function(){
+    let disactiveAutoplay = clearInterval(start);
+})
