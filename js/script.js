@@ -55,7 +55,7 @@ function autoplay(){
     //stessa cosa per i cerchi
 }
 
-const start = setInterval(autoplay, 3000);
+let start = setInterval(autoplay, 3000);
 
 next.addEventListener('click',autoplay);
 
@@ -79,7 +79,7 @@ prev.addEventListener('click', function(){
 });
 
 document.getElementById('activeAutoplay').addEventListener('click', function(){
-    setInterval(autoplay, 3000);
+    start = setInterval(autoplay, 3000);
 })
 
 document.getElementById('disactiveAutoplay').addEventListener('click', function(){
