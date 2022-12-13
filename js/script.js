@@ -58,20 +58,7 @@ function autoplay(){
 const start = setInterval(autoplay, 3000);
 
 next.addEventListener('click', function(){
-    //verifico l'elemento attivo (itemActive)
-    items[itemActive].classList.remove('active');
-    circles[itemActive].classList.remove('active');
-    //incremento il suo valore di 1
-    if(itemActive == 4){
-        itemActive = 0
-    }
-    else{
-        itemActive++
-    }
-    //aggiungere la class active al nuovo elemento dell'array items e la vado a rimuovere da quello precedente
-    items[itemActive].classList.add('active');
-    circles[itemActive].classList.add('active');
-    //stessa cosa per i cerchi
+    autoplay()
 });
 
 
