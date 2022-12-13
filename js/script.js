@@ -57,9 +57,7 @@ function autoplay(){
 
 const start = setInterval(autoplay, 3000);
 
-next.addEventListener('click', function(){
-    autoplay()
-});
+next.addEventListener('click',autoplay);
 
 
 prev.addEventListener('click', function(){
